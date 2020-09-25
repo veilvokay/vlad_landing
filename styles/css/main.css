@@ -33,3 +33,24 @@ body {
   background-color: #0F2027;
   border-color: #0F2027;
   color: rgba(255, 217, 0, 0.863); }
+
+.block {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  transform: translate(0px, -150px);
+  border: 2px solid #0F2027;
+  border-radius: 5px; }
+
+.bg-secondary {
+  background-color: #0F2027 !important; }
+
+a.bg-secondary:hover, a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: #0F2027 !important; }
+
+#small {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
