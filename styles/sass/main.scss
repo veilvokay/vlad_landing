@@ -4,16 +4,19 @@
 
 body {
     // background-image: url(../../images/background.jpg);
-    background-color: #403B4A;
+    background-color: #5e5e5f;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
 
-main {
-    background-color: black;
-    opacity: 0.5;
+main .main-content {
+    background-color: #3f404096;
+    border-top: 0.5px solid #fff1b9;
+    border-bottom: 0.5px solid #fff1b9;
+    // opacity: 0.2;
+    // border-bottom: 1px solid #272625;
 }
 
 .m-top-xl {
@@ -22,37 +25,45 @@ main {
 }
 
 .btn-secondary {
-    background-color: #8e8eda;
+    background-color: #272625;
 }
+
 .dropdown-menu {
-    background-color: #8e8eda;
-    color: white;
+    background-color: #272625;
+    color: #fff1b9;
 }
 .dropdown-item {
     &:hover,
     &:focus {
-        background-color: #8e8eda;
-        color: gold;
+        background-color: #272625;
+        color: #fff1b9;
+        border-bottom: 1px solid #fff1b9;
     }
-    color: white;
+    color: #fff1b9;
+    border-bottom: 0px;
+    transition: border-bottom 2s linear;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
-  color: rgba(255, 217, 0, 0.863);
-  background-color: #8e8eda;
-  border-color: #8e8eda;
+  color: #fff1b9;
+  background-color: #272625;
+  border-color: #fff1b9;
+  outline: none;
 }
 .btn-secondary:hover {
-  background-color: #8e8eda;
-  border-color: #8e8eda;
-  color: rgba(255, 217, 0, 0.863);
+  background-color: #272625;
+  border-color: #fff1b9;
+  color: #fff1b9;
+  outline: none;
 }
 
 .image-handler {
     width: 100%;
-    background-color: #ceceef4f;
-    border: 1px solid #a19f9f;
+    background-color: rgba(0, 0, 0, 0.452);
+    // border: 1px solid #a19f9f;
+    border-left: 1px solid #cff09e;
+    border-right: 1px solid #cff09e;
     height: 400px;
     // transform: translateY(-25%);
 }
@@ -87,7 +98,7 @@ textarea {
     border-color: violet;
     text-align: center;
     overflow: hidden;
-    outline: 1px dotted orchid;
+    outline: 1px solid #a8dba8;
 }
 
 
