@@ -11,41 +11,14 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
 }
 
-// .dropd {
-//     height: 10vh;
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//     margin: auto;
-// }
+main {
+    background-color: black;
+    opacity: 0.5;
+}
 
-// .colors,
-// .sizes {
-//     position: relative;
-
-//     ul {
-//         background: white;
-//         position: absoulute;
-//         left: 0px;
-//         margin-top: 10px;
-//         width: 200px;
-//         height: 200px;
-//         display: flex;
-//         justify-content: space-around;
-//         align-items: center;
-//         flex-direction: column;
-//     }
-// }
-
-// .container {
-//     width: 100%;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//     margin-left: auto;
-//     margin-right: auto;
-// }
 .m-top-xl {
-    margin-top: 400px;
+    margin-top: 300px;
+    // margin: 100px auto;
 }
 
 .btn-secondary {
@@ -77,11 +50,11 @@ body {
 }
 
 .image-handler {
-    width: auto;
+    width: 100%;
     background-color: #ceceef4f;
     border: 1px solid #a19f9f;
     height: 400px;
-    transform: translateY(-25%);
+    // transform: translateY(-25%);
 }
 
 .text-center {
@@ -91,8 +64,36 @@ body {
     vertical-align: middle;
 }
 
+#text {
+    &.green {
+        color: green;
+    };
+    &.red {
+        color: red;
+    };
+    &.blue {
+        color: blue;
+    };
+    position: absolute;
+    z-index: 999;
+}
+
+textarea {
+    resize: both;
+    max-width: 500px;
+    max-height: 400px;
+    background: transparent;
+    border: 0.5px;
+    border-color: violet;
+    text-align: center;
+    overflow: hidden;
+    outline: 1px dotted orchid;
+}
+
+
 @media screen and (max-width: 1366px) {
     .m-top-lg {
         margin-top: 225px;
+        // margin: 100px auto;
     }
 } 

@@ -8,8 +8,12 @@ body {
   background-attachment: fixed;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
 
+main {
+  background-color: black;
+  opacity: 0.5; }
+
 .m-top-xl {
-  margin-top: 400px; }
+  margin-top: 300px; }
 
 .btn-secondary {
   background-color: #8e8eda; }
@@ -36,17 +40,37 @@ body {
   color: rgba(255, 217, 0, 0.863); }
 
 .image-handler {
-  width: auto;
+  width: 100%;
   background-color: #ceceef4f;
   border: 1px solid #a19f9f;
-  height: 400px;
-  transform: translateY(-25%); }
+  height: 400px; }
 
 .text-center {
   text-align: center; }
 
 .vertical-middle {
   vertical-align: middle; }
+
+#text {
+  position: absolute;
+  z-index: 999; }
+  #text.green {
+    color: green; }
+  #text.red {
+    color: red; }
+  #text.blue {
+    color: blue; }
+
+textarea {
+  resize: both;
+  max-width: 500px;
+  max-height: 400px;
+  background: transparent;
+  border: 0.5px;
+  border-color: violet;
+  text-align: center;
+  overflow: hidden;
+  outline: 1px dotted orchid; }
 
 @media screen and (max-width: 1366px) {
   .m-top-lg {

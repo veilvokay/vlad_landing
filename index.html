@@ -7,6 +7,9 @@
     <!-- <link rel="stylesheet" href="./styles/css/vendors/bootstrap.css"> -->
     <!-- <link rel="stylesheet" href="./styles/css/reset.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Peddana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Peddana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/css/main.css">
 </head>
 <body>
@@ -14,7 +17,7 @@
     <main>
         <div class="content m-top-xl m-top-lg">
             <div class="container-fluid">
-                <div class="row">
+                <div class="row align-items-center">
                     <div class="col-lg-6 col-sm-6">
                         <div class="row">
                             <div class="col-lg-6 col-sm-6 d-flex flex-column">
@@ -24,8 +27,8 @@
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
                                       <button class="dropdown-item" type="button" onclick="smallImg()">Маленькая</button>
-                                      <button class="dropdown-item" type="button">Средняя</button>
-                                      <button class="dropdown-item" type="button">Большая</button>
+                                      <button class="dropdown-item" type="button" onclick="midImg()">Средняя</button>
+                                      <button class="dropdown-item" type="button" onclick="hugeImg()">Большая</button>
                                     </div>
                                   </div>
                                 <div class="btn-group m-3">
@@ -43,21 +46,21 @@
                                       Цвет надписи
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                      <button class="dropdown-item" type="button">Черный</button>
-                                      <button class="dropdown-item" type="button">Красный</button>
-                                      <button class="dropdown-item" type="button">Зеленый</button>
+                                      <button class="dropdown-item" type="button" onclick="colBlue()">Синий</button>
+                                      <button class="dropdown-item" type="button" onclick="colRed()">Красный</button>
+                                      <button class="dropdown-item" type="button" onclick="colGreen()">Зеленый</button>
                                     </div>
                                   </div>
                             </div>
-                            <div class="col-lg-6 col-sm-6 d-flex flex-column">
+                            <div class="col-lg-6 col-sm-6 d-flex flex-column justify-content-center">
                                 <div class="btn-group m-3">
                                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                       Шрифт
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                      <button class="dropdown-item" type="button">Маленькая</button>
-                                      <button class="dropdown-item" type="button">Средняя</button>
-                                      <button class="dropdown-item" type="button">Большая</button>
+                                      <button class="dropdown-item" type="button" onclick="peddanaFont()">Peddana</button>
+                                      <button class="dropdown-item" type="button" onclick="oswaldFont()">Oswald</button>
+                                      <button class="dropdown-item" type="button" onclick="antonFont()">Anton</button>
                                     </div>
                                   </div>
                                 <div class="btn-group m-3">
@@ -65,29 +68,31 @@
                                       Размер шрифта
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                      <button class="dropdown-item" type="button">Черный</button>
-                                      <button class="dropdown-item" type="button">Синий</button>
-                                      <button class="dropdown-item" type="button">Желтый</button>
+                                      <button class="dropdown-item" type="button" id='size-24'>Маленький</button>
+                                      <button class="dropdown-item" type="button" id='size-36'>Средний</button>
+                                      <button class="dropdown-item" type="button" id='size-48'>Большой</button>
                                     </div>
                                   </div>
-                                <div class="btn-group m-3">
+                                <!-- <div class="btn-group m-3">
                                     <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Гадпись на вывеске
+                                      Надпись на вывеске
                                     </button>
                                     <div class="dropdown-menu dropdown-menu-right">
                                       <button class="dropdown-item" type="button">Черный</button>
                                       <button class="dropdown-item" type="button">Красный</button>
                                       <button class="dropdown-item" type="button">Зеленый</button>
                                     </div>
-                                  </div>
+                                  </div> -->
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="block d-flex justify-content-center align-items-center">
-                            <div class="contents">
-                                <div class="banner" id="small"></div>
+                        <div class="col-lg-12">
+                          <div class="row">
+                            <div class="image-handler justify-content-center align-items-center d-flex">
+                              <textarea class="justify-content-center align-items-center alignt-text-middle text" name="" id="text" cols="30" rows="10" wrap="off" placeholder="Your text here"></textarea>
                             </div>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -99,20 +104,97 @@
 
 
 
-
-    <!-- <script src="./js/libs/jquery-3.5.1.js"></script>
-    <script src="./js/bootstrap.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.dropdown-toggle').dropdown();
-        });
-    </script> -->
     <script>
         function smallImg() {
+          if (document.getElementsByClassName('image-handler')[0].children.length >= 2) {
+            let image_rm = document.getElementsByTagName('img')[0];
+            image_rm.parentNode.removeChild(image_rm);
             let img = document.createElement('img');
-            img.src = '../images/smallBan.png';
-            document.getElementById('small').appendChild(img);
+            img.src = './images/small_banner_red.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          } else {
+            let img = document.createElement('img');
+            img.src = './images/small_banner_red.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          }
     }
+    </script>
+    <script>
+      function midImg() {
+        if (document.getElementsByClassName('image-handler')[0].children.length >= 1) {
+            let image_rm = document.getElementsByTagName('img')[0];
+            image_rm.parentNode.removeChild(image_rm);
+            let img = document.createElement('img');
+            img.src = './images/square_banner.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          } else {
+            let img = document.createElement('img');
+            img.src = './images/square_banner.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          }
+      }
+    </script>
+    <script>
+      function hugeImg() {
+        if (document.getElementsByClassName('image-handler')[0].children.length >= 1) {
+            let image_rm = document.getElementsByTagName('img')[0];
+            image_rm.parentNode.removeChild(image_rm);
+            let img = document.createElement('img');
+            img.src = './images/huge_banner.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          } else {
+            let img = document.createElement('img');
+            img.src = './images/huge_banner.png';
+            document.getElementsByClassName('image-handler')[0].appendChild(img);
+          }
+      }
+    </script>
+    <script>
+      function colGreen() {
+        let textArea = document.getElementsByTagName('textarea')[0];
+        textArea.className = 'green';
+      }
+    </script>
+    <script>
+      function colRed() {
+        let textArea = document.getElementsByTagName('textarea')[0];
+        textArea.className = 'red';
+      }
+    </script>
+    <script>
+      function colBlue() {
+        let textArea = document.getElementsByTagName('textarea')[0];
+        textArea.className = 'blue';
+      }
+    </script>
+    <script>
+      function makeSize(value) {
+        return function() {
+          document.getElementsByClassName('image-handler')[0].style.fontSize = value + 'px'
+        };
+      };
+      let size24 = makeSize(24);
+      let size36 = makeSize(36);
+      let size48 = makeSize(48);
+
+      document.getElementById('size-24').onclick = size24;
+      document.getElementById('size-36').onclick = size36;
+      document.getElementById('size-48').onclick = size48;
+    </script>
+    <script>
+      function peddanaFont() {
+        document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Peddana, serif'
+      }
+    </script>
+    <script>
+      function oswaldFont() {
+        document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Oswald, sans-serif'
+      }
+    </script>
+    <script>
+      function antonFont() {
+        document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Anton, sans-serif'
+      }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
