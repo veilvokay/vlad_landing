@@ -128,10 +128,9 @@
             document.getElementsByClassName('image-handler')[0].appendChild(img);
           }
     }
-    </script>
-    <script>
+
       function midImg() {
-        if (document.getElementsByClassName('image-handler')[0].children.length >= 1) {
+        if (document.getElementsByClassName('image-handler')[0].children.length >= 2) {
             let image_rm = document.getElementsByTagName('img')[0];
             image_rm.parentNode.removeChild(image_rm);
             let img = document.createElement('img');
@@ -143,10 +142,9 @@
             document.getElementsByClassName('image-handler')[0].appendChild(img);
           }
       }
-    </script>
-    <script>
+
       function hugeImg() {
-        if (document.getElementsByClassName('image-handler')[0].children.length >= 1) {
+        if (document.getElementsByClassName('image-handler')[0].children.length >= 2) {
             let image_rm = document.getElementsByTagName('img')[0];
             image_rm.parentNode.removeChild(image_rm);
             let img = document.createElement('img');
@@ -158,26 +156,22 @@
             document.getElementsByClassName('image-handler')[0].appendChild(img);
           }
       }
-    </script>
-    <script>
+
       function colGreen() {
         let textArea = document.getElementsByTagName('textarea')[0];
         textArea.className = 'green';
       }
-    </script>
-    <script>
+
       function colRed() {
         let textArea = document.getElementsByTagName('textarea')[0];
         textArea.className = 'red';
       }
-    </script>
-    <script>
+
       function colBlue() {
         let textArea = document.getElementsByTagName('textarea')[0];
         textArea.className = 'blue';
       }
-    </script>
-    <script>
+
       function makeSize(value) {
         return function() {
           document.getElementsByClassName('image-handler')[0].style.fontSize = value + 'px'
@@ -190,30 +184,18 @@
       document.getElementById('size-24').onclick = size24;
       document.getElementById('size-36').onclick = size36;
       document.getElementById('size-48').onclick = size48;
-    </script>
-    <script>
+
       function peddanaFont() {
         document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Peddana, serif'
       }
-    </script>
-    <script>
+
       function oswaldFont() {
         document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Oswald, sans-serif'
       }
-    </script>
-    <script>
+
       function antonFont() {
         document.getElementsByClassName('image-handler')[0].style.fontFamily = 'Anton, sans-serif'
       }
-    </script>
-    <script>
-      function calculatePrice() {
-        if (document.getElementsByTagName('img')[0].classList.value == 'small') {
-          console.log(1);
-        } else {
-          console.log('stop');
-        }
-      };
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
